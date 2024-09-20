@@ -45,8 +45,13 @@ Also in the `media/` folder: [ТЗ Разработчик](<media/ТЗ Разр�
 **Желаем удачи\!**
 
 ## Setting up and running the project
-Go to the **project directory:**
 
+**Clone** the project:
+```sh
+git clone https://github.com/NatsionalnoeDostoyanie/mycego_test_task.git
+```
+
+Go to the **project directory:**
 ```sh
 cd mycego_test_task
 ```
