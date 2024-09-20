@@ -1,0 +1,56 @@
+{% extends 'v1/base.html' %}
+
+{% block title %}Список файлов и папок{% endblock %}
+
+{% block header %}Список файлов и папок{% endblock %}
+
+{% block content %}
+<h2>{{ data.name }}</h2>
+<form method="POST" action="{% url 'download_files' %}?public_key={{ data.embedded.public_key }}&public_url={{ data.public_url }}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Выбрать</th>
+            <th>Действия</th>
+        </tr>
+
+        {% for file in data.embedded.items %}
+        <tr>
+            <td>{{ file.name }}</td>
+
+            {% if file.media_type %}
+            <td>{{ file.media_type }}</td>
+            <td>
+                <input type="checkbox" name="selected_files" value="{{ data.path }}{{ file.name }}">
+            </td>
+
+            {% else %}
+            <td>{{ file.type }}</td>
+            <td></td>
+            <td>
+                <a href="{% url 'files_list' %}?public_url={{ file.public_url }}">Открыть папку</a>
+            </td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <button type="submit" id="download-btn" style="display: none;">Скачать</button>
+</form>
+{% endblock %}
+
+{% block scripts %}
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const downloadBtn = document.getElementById('download-btn');
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        const anyChecked = [...checkboxes].some(cb => cb.checked);
+        downloadBtn.style.display = anyChecked ? 'block' : 'none';
+    });
+});
+{% endblock %}
+
