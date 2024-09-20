@@ -1,4 +1,6 @@
-# Common and general settings
+"""
+Common and general settings.
+"""
 
 import os
 

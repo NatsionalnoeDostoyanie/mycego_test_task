@@ -1,4 +1,6 @@
-# Configurations for internationalization and localization, including language files and translation settings.
+"""
+Configurations for internationalization and localization, including language files and translation settings.
+"""
 
 LANGUAGE_CODE = "en-us"
 

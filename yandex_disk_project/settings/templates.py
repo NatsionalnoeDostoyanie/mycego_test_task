@@ -1,4 +1,6 @@
-# Settings for templates, including template directory paths and rendering options.
+"""
+Settings for templates, including template directory paths and rendering options.
+"""
 
 TEMPLATES = [
     {

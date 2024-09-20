@@ -1,4 +1,6 @@
-# Settings for registering Django applications and their configurations.
+"""
+Settings for registering Django applications and their configurations.
+"""
 
 INSTALLED_APPS = [
     "yandex_disk_project.disk_api.v1.apps.DiskApiConfig",

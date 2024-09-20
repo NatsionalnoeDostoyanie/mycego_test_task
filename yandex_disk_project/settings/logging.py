@@ -1,4 +1,6 @@
-# Settings for the logging system, including log levels, formatting and handlers.
+"""
+Settings for the logging system, including log levels, formatting and handlers.
+"""
 
 import logging
 import os

@@ -1,3 +1,6 @@
+"""
+Database settings.
+"""
 import os.path
 
 from yandex_disk_project.settings.common import BASE_DIR
