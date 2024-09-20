@@ -45,7 +45,6 @@ Also in the `media/` folder: [ТЗ Разработчик](<media/ТЗ Разр�
 **Желаем удачи\!**
 
 ## Setting up and running the project
-[text](<media/ТЗ Разработчик.pdf>)
 Go to the **project directory:**
 
 ```sh
